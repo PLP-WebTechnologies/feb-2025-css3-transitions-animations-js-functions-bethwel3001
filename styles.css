@@ -1,0 +1,116 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+  border: 3px solid #6a11cb;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(106, 17, 203, 0.3);
+  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Button styles */
+.btn {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(52, 152, 219, 0.4);
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Animated box */
+.box {
+  width: 150px;
+  height: 150px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 15px rgba(101, 71, 255, 0.3);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animation triggered by JS */
+.box.animate {
+  animation: pulse 1s ease forwards;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 8px 15px rgba(101, 71, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 12px 25px rgba(101, 71, 255, 0.6);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 15px rgba(101, 71, 255, 0.3);
+  }
+}
+
+/* Preference toggle */
+.preference {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-theme .container {
+  border-color: #9b59b6;
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.7);
+}
+
+body.dark-theme h1 {
+  color: #f8f8f8;
+  text-shadow: 0 0 8px #9b59b6;
+  font-style: italic;
+  letter-spacing: 1.2px;
+}
+
+body.dark-theme .btn {
+  background-color: #8e44ad;
+  box-shadow: 0 4px 6px rgba(142, 68, 173, 0.6);
+}
+
+body.dark-theme .btn:hover {
+  background-color: #732d91;
+}
+
+body.dark-theme .box {
+  background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%);
+  box-shadow: 0 8px 15px rgba(155, 89, 182, 0.6);
+}
